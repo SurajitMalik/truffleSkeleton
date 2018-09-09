@@ -1,7 +1,7 @@
 let _ = require('lodash'),
     nconf = require('nconf'),
     path = require('path'),
-    defaults = require('./defaults/defaults.json');
+    defaults = require('./default.json');
 
 let configPath = path.join(__dirname, '../config');
 nconf.env().argv();

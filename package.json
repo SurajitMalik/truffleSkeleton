@@ -10,8 +10,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "ethereumjs-wallet": "*",
     "lodash": "*",
-    "nconf": "*"
+    "nconf": "*",
+    "web3-provider-engine": "^13.6.6",
+    "web3": "^0.20.6"
   },
   "repository": {
     "type": "git",
