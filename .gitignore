@@ -1,1 +1,13 @@
-/node_modules
+logs/*
+!.gitkeep
+.DS_Store
+.idea
+package-lock.json
+node_modules/
+bower_components/
+tmp
+build/
+dist/
+contracts.txt
+*.flattened
+
