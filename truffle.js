@@ -33,10 +33,11 @@ module.exports = {
   networks: {
     development: {
       host: 'localhost',
-      port: 9545,
+      port: 8545,
+      from: "0x02de304abc1e5065e70ee9f291e9d1aef4afc9b3",
       network_id: '*',
       gas: 4500000,
-      gasPrice: 100000000
+      gasPrice: 0
     },
     ropsten: {
       provider: function () {
