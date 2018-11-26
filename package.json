@@ -7,10 +7,14 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=contracts:* node ./bin/contracts"
   },
   "dependencies": {
+    "bluebird": "^3.5.3",
+    "debug": "^4.1.0",
     "ethereumjs-wallet": "*",
+    "jayson": "^2.1.0",
     "lodash": "*",
     "nconf": "*",
     "web3-provider-engine": "^13.6.6",

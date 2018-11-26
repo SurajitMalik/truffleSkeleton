@@ -6,16 +6,35 @@ contract A{
 
     B b;
 
-    mapping ()
+    mapping (bytes32 => address) public address_bs;
 
-    function createB(
-        uint8 _id,
-        string _name,
-        string _desc
+    constructor(
+        bytes32 _id,
+        bytes _name,
+        bytes _desc
     )
-        external
-        returns (address)
+        public
     {
+        b = new B(_id, _name, _desc);
+        address_bs[_id] = b;
+    }
 
+    function getB(bytes32 _id)
+        public
+        view
+        returns(
+            bytes Name,
+            bytes Desc
+        )
+    {
+        (Name, Desc) = B(address_bs[_id]).bs(_id);
+    }
+
+    function getB_name(bytes32 _id)
+        public
+        view
+        returns (bytes)
+    {
+        return B(address_bs[_id]).getName(_id);
     }
 }

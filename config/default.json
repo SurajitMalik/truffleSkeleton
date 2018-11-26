@@ -1,3 +1,12 @@
 {
-    "owner": ""
+  "host": "0.0.0.0",
+  "port": 2718,
+  "web3": {
+    "owner": "0xe38f9bc9501df363f9d2d46bc518025d765e94ed",
+    "password": "surajit",
+    "url": "http://localhost:8545",
+    "gasLimit": "800000",
+    "gasPrice": "0",
+    "chainId": "*"
+  }
 }

@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+/**
+ * Start contract service
+ */
+let ContractServer = require("../index");
+
+let server = new ContractServer();
+server.start();

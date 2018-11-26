@@ -3,19 +3,28 @@ pragma solidity ^0.4.24;
 contract B{
 
     struct b{
-        string Name;
-        string Desc;
+        bytes Name;
+        bytes Desc;
     }
 
-    mapping (uint8 => b) public bs;
+    mapping (bytes32 => b) public bs;
 
     constructor(
-        uint8 _id,
-        string _name,
-        string _desc
+        bytes32 _id,
+        bytes _name,
+        bytes _desc
     )
         public
     {
-        bs[_id] = (_id, _name, _desc);
+        bs[_id].Name =  _name;
+        bs[_id].Desc = _desc;
+    }
+
+    function getName(bytes32 _id)
+        public
+        view
+        returns (bytes)
+    {
+        return bs[_id].Name;
     }
 }
