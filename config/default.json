@@ -2,8 +2,8 @@
   "host": "0.0.0.0",
   "port": 2718,
   "web3": {
-    "owner": "0xe38f9bc9501df363f9d2d46bc518025d765e94ed",
-    "password": "surajit",
+    "owner": "0x8aca0436da4e98116d4567175861bc717ec010ee",
+    "privateKey": "3193fe1f82153238c297260eccdc3ee86806875543764b5e52a496301ca2938e",
     "url": "http://localhost:8545",
     "gasLimit": "800000",
     "gasPrice": "0",

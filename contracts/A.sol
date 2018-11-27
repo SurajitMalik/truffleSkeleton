@@ -10,8 +10,8 @@ contract A{
 
     constructor(
         bytes32 _id,
-        bytes _name,
-        bytes _desc
+        string _name,
+        string _desc
     )
         public
     {
@@ -19,22 +19,27 @@ contract A{
         address_bs[_id] = b;
     }
 
+    function modifyB_name(
+        bytes32 _id,
+        string _newName
+    )
+        external
+        returns (bool)
+    {
+        return B(address_bs[_id]).modifyName(
+            _id,
+            _newName
+        );
+    }
+
     function getB(bytes32 _id)
         public
         view
         returns(
-            bytes Name,
-            bytes Desc
+            string Name,
+            string Desc
         )
     {
         (Name, Desc) = B(address_bs[_id]).bs(_id);
-    }
-
-    function getB_name(bytes32 _id)
-        public
-        view
-        returns (bytes)
-    {
-        return B(address_bs[_id]).getName(_id);
     }
 }

@@ -8,8 +8,8 @@ module.exports = function test(deployer) {
   deployer.deploy(
     A,
     web3.fromAscii("a1"),
-    web3.fromAscii("Surajit"),
-    web3.fromAscii("Married")
+    ("Surajit"),
+    ("Married")
   ).then(() => {
     fs.writeFileSync(
       './config/contracts.json', `{  
