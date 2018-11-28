@@ -5,17 +5,17 @@ let contracts = jayson.client.tcp({
   port: 2718
 });
 
-let bIdName = {
-  id: "a1",
-  name: "Surajit Malik"
-};
+// let bIdName = {
+//   id: "a1",
+//   Name: "Surajit Malik"
+// };
 
-contracts.request("modifyB_name", [bIdName], (err, reply) => {
-  console.log('**** reply', reply);
-})
-
-// let id = "a1";
-
-// contracts.request("getB", [id], (err, reply) => {
+// contracts.request("modifyB_name", [bIdName], (err, reply) => {
 //   console.log('**** reply', reply);
 // })
+
+let id = "a1";
+
+contracts.request("getB", [id], (err, reply) => {
+  console.log('**** reply', reply);
+})

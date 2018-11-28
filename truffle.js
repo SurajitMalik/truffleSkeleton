@@ -18,6 +18,7 @@ module.exports = {
     testrpc: {
       host: 'localhost',
       port: 8545,
+      from: "0x220715c56a4fef098b897572b3d399cd086ad595",
       network_id: '*',
       gas: 4500000,
       gasPrice: 1000000000

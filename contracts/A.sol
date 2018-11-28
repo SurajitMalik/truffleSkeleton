@@ -8,6 +8,8 @@ contract A{
 
     mapping (bytes32 => address) public address_bs;
 
+    event logBNameModified(address indexed creator, string newName);
+
     constructor(
         bytes32 _id,
         string _name,
@@ -26,10 +28,12 @@ contract A{
         external
         returns (bool)
     {
-        return B(address_bs[_id]).modifyName(
+        bool flag = B(address_bs[_id]).modifyName(
             _id,
             _newName
         );
+        emit logBNameModified(msg.sender, _newName);
+        return flag;
     }
 
     function getB(bytes32 _id)

@@ -2,11 +2,11 @@
   "host": "0.0.0.0",
   "port": 2718,
   "web3": {
-    "owner": "0x8aca0436da4e98116d4567175861bc717ec010ee",
-    "privateKey": "3193fe1f82153238c297260eccdc3ee86806875543764b5e52a496301ca2938e",
+    "owner": "0x220715c56a4fef098b897572b3d399cd086ad595",
+    "privateKey": "cca71cfc6f84f07e5916e7bdfe3a0fb0cd6fe61e9403b0ecb7deebdac59d70a2",
     "url": "http://localhost:8545",
     "gasLimit": "800000",
-    "gasPrice": "0",
+    "gasPrice": "1000000000",
     "chainId": "*"
   }
 }

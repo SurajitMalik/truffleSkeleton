@@ -11,13 +11,16 @@
     "start": "DEBUG=contracts:* node ./bin/contracts"
   },
   "dependencies": {
+    "bignumber.js": "^8.0.1",
     "bluebird": "^3.5.3",
     "debug": "^4.1.0",
+    "ethereumjs-lib": "^3.0.0",
+    "ethereumjs-wallet": "^0.6.2",
     "jayson": "^2.1.0",
     "lodash": "*",
     "nconf": "*",
-    "web3-provider-engine": "^13.6.6",
-    "web3": "^0.20.6"
+    "web3": "^0.20.6",
+    "web3-provider-engine": "^13.6.6"
   },
   "devDependencies": {
     "truffle-hdwallet-provider": "0.0.6",
