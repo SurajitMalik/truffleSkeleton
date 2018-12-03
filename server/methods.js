@@ -5,9 +5,8 @@ const
 
 module.exports = {
 
-  "modifyB_name": function (bIdName, done) {
-    console.log("*** Req body", bIdName);
-    A_Ins.modifyB_name(bIdName.id, bIdName.Name)
+  "modifyB_name": function (id, name, done) {
+    A_Ins.modifyB_name(id, name)
       .asCallback(done);
   },
 

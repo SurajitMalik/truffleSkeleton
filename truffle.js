@@ -1,7 +1,8 @@
 const
   HDWalletProvider = require("truffle-hdwallet-provider"),
   PrivateKeyProvider = require("truffle-privatekey-provider"),
-  secrets = require("./secrets.json");
+  secrets = require("./secrets.json"),
+  config = require("./config");
 
 // 1 eth = 10^18 wei
 // 1 gwei = 10^9 wei
@@ -10,7 +11,7 @@ module.exports = {
   networks: {
     development: {
       host: 'localhost',
-      port: 9545,
+      port: 8545,
       network_id: '*',
       gas: 4500000,
       gasPrice: 1000000000
@@ -18,7 +19,7 @@ module.exports = {
     testrpc: {
       host: 'localhost',
       port: 8545,
-      from: "0x220715c56a4fef098b897572b3d399cd086ad595",
+      from: config.get("web3:owner"),
       network_id: '*',
       gas: 4500000,
       gasPrice: 1000000000
